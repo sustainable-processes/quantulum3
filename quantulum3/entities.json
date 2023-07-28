@@ -808,5 +808,18 @@
       }
     ],
     "URI": "Data_transmission"
+  },
+  "wavenumber": {
+    "dimensions": [
+      {
+        "base": "dimensionless",
+        "power": 1
+      },
+      {
+        "base": "length",
+        "power": -1
+      }
+    ],
+    "URI": "Wavenumber"
   }
 }
