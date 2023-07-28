@@ -134,13 +134,14 @@ def get_values(item, lang="en_US"):
         values = [
             float(re.sub(r"-$", "", v)) * factors[i] for i, v in enumerate(values)
         ]
-        if values[1] < values[0]:
-            raise ValueError(
-                "Invalid range, with second item being smaller than the first item"
-            )
-        mean = sum(values) / len(values)
-        uncertainty = mean - min(values)
-        values = [mean]
+        # if values[1] < values[0]:
+        #     raise ValueError(
+        #         "Invalid range, with second item being smaller than the first item"
+        #     )
+        # mean = sum(values) / len(values)
+        # uncertainty = mean - min(values)
+        # values = [mean]
+        
     elif uncer_separator:
         values = [float(i) for i in value.split(uncer_separator[0])]
         uncertainty = values[1] * factors[1]
