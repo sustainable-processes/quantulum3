@@ -30,6 +30,18 @@ except ImportError:
         "to install them. The classifer helps to dissambiguate units."
     )
 
+classifier_path_eg = language.topdir("en_US").joinpath("clf.joblib")
+
+try:
+    with open(classifier_path_eg, "rb") as file:
+        joblib.load(file)
+except FileNotFoundError:
+    USE_CLF=False
+    warnings.warn(
+    "Classifier dependencies not installed. Run pip install quantulum3[classifier] "
+    "to install them. The classifer helps to dissambiguate units."
+    )
+
 try:
     import wikipedia
 except ImportError:
